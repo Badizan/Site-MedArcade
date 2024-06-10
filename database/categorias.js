@@ -1,0 +1,111 @@
+export default [
+  {
+    id:1,
+    nome:"Anatomia e Fisiologia Básica",
+    icon:require("~/static/img/sistema-endocrino.png"),
+    alt:"",
+  },
+  {
+    id:2,
+    nome:"Anatomia e Fisiologia Cardíaca",
+    icon:require("~/static/img/vascular.png"),
+    alt:"",
+  },
+  {
+    id:3,
+    nome:"Anatomia e Fisiologia do Olho",
+    icon:require("~/static/img/Aolho.png"),
+    alt:"",
+  },
+  {
+    id:4,
+    nome:"Anatomia e Fisiologia do Sistema Esquelético",
+    icon:require("~/static/img/ossos-humanos.png"),
+    alt:"",
+  },
+  {
+    id:5,
+    nome:"Anatomia e Fisiologia do Sistema Nervoso",
+    icon:require("~/static/img/nervoso.png"),
+    alt:"",
+  },
+  {
+    id:6,
+    nome:"Farmacologia",
+    icon:require("~/static/img/nanotecnologia.png"),
+    alt:"",
+  },
+  {
+    id:7,
+    nome:"Semiologia e Semiotécnica",
+    icon:require("~/static/img/febre.png"),
+    alt:"",
+  },
+  {
+    id:8,
+    nome:"Quiz e Desafios",
+    icon:require("~/static/img/problema.png"),
+    alt:"",
+  },
+  {
+    id:9,
+    nome:"Técnica Cirúrgica",
+    icon:require("~/static/img/doutor.png"),
+    alt:"",
+  },
+  {
+    id:10,
+    nome:"Células",
+    icon:require("~/static/img/celulain.png"),
+    alt:"",
+  },
+  {
+    id:11,
+    nome:"Sangue e Homeostase",
+    icon:require("~/static/img/sanguein.png"),
+    alt:"",
+  },
+  {
+    id:12,
+    nome:"Doenças",
+    icon:require("~/static/img/transmissao.png"),
+    alt:"",
+  },
+  {
+    id:13,
+    nome:"Sistemas",
+    icon:require("~/static/img/sistema-circulatorio.png"),
+    alt:"",
+  },
+  {
+    id:14,
+    nome:"Radiologia",
+    icon:require("~/static/img/raio-x.png"),
+    alt:"",
+  },
+  {
+    id:15,
+    nome:"Radiologia Patológica",
+    icon:require("~/static/img/raio-xP.png"),
+    alt:"",
+  },
+  {
+    id:16,
+    nome:"Laminário",
+    icon:require("~/static/img/laminas-de-microscopio.png"),
+    alt:"",
+  },
+  {
+    id:17,
+    nome:"Anatomia Muscular",
+    icon:require("~/static/img/muscular-system.png"),
+    alt:"",
+  },
+  {
+    id:7,
+    nome:"Semiologia e Semiotécnica",
+    icon:require("~/static/img/febre.png"),
+    alt:"",
+  },
+  
+];

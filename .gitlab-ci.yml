@@ -1,0 +1,40 @@
+stages:
+  - production
+
+build:
+  image: node:16-alpine
+  stage: production
+  tags:
+    - kubernates
+  rules:
+   - if: $CI_COMMIT_TAG
+  artifacts:
+    paths:
+      - ./dist
+    expire_in: 60 mins
+  script:
+    - yarn install --production=false
+    - yarn generate --fail-on-error
+
+s3_upload:
+  image: registry.gitlab.com/gitlab-org/cloud-deploy/aws-base:latest
+  stage: production
+  tags:
+    - kubernates
+  rules:
+   - if: $CI_COMMIT_TAG
+  needs: [ "build" ]
+  script:
+    - aws s3 rm s3://web-gi-production-medarcade --recursive
+    - aws s3 sync ./dist s3://web-gi-production-medarcade --cache-control max-age=31536000
+
+cloudfront_invalidation:
+  image: registry.gitlab.com/gitlab-org/cloud-deploy/aws-base:latest
+  stage: production
+  tags:
+    - kubernates
+  rules:
+   - if: $CI_COMMIT_TAG
+  needs: [ "s3_upload" ]
+  script:
+    - aws cloudfront create-invalidation --distribution-id E1PPQQICZSFGZ3 --paths "/*"
